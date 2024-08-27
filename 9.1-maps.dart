@@ -9,10 +9,16 @@ void main() {
     {'name': 'mario', 'isMarried': false},
     {'name': 'luigi', 'isMarried': false},
   };
-  
+  var newUsers = [];
   for (var user in users) {
-    if (user['isMarried']) {
-      print('esta casado');
+    if (user['isMarried'] == true) {
+      newUsers.add(
+        {
+          {'username': user['name']}
+        }
+      );
     }
   }
+
+  print(newUsers.length);
 }
